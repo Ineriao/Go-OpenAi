@@ -19,5 +19,6 @@ require (
 
 require (
 	github.com/go-playground/validator/v10 v10.27.0
+	github.com/gorilla/websocket v1.5.3
 	golang.org/x/sys v0.30.0 // indirect
 )
