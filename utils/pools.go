@@ -2,7 +2,6 @@ package utils
 
 import (
 	"context"
-	"fmt"
 	"runtime"
 	"sync"
 	"sync/atomic"
@@ -35,14 +34,6 @@ func (j *SimpleJob) GetID() string {
 func (j *SimpleJob) GetPriority() int {
 	return j.Priority
 }
-
-// error
-var (
-	ErrPoolNotStarted = fmt.Errorf("协程池未启动")
-    ErrPoolStopped    = fmt.Errorf("协程池已停止")
-    ErrPoolFull       = fmt.Errorf("协程池队列已满")
-    ErrSubmitTimeout  = fmt.Errorf("任务提交超时")
-)
 
 type Worker struct {
 	id       int
